@@ -24,15 +24,8 @@
             --olive-light: #6B7F3A;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Spectral', serif;
@@ -47,7 +40,6 @@
             font-family: 'Frank Ruhl Libre', serif;
         }
 
-        /* Language Toggle */
         .lang-toggle {
             position: fixed;
             top: 20px;
@@ -61,33 +53,23 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
-        body.hebrew .lang-toggle {
-            right: auto;
-            left: 20px;
-        }
+        body.hebrew .lang-toggle { right: auto; left: 20px; }
 
         .lang-btn {
             background: transparent;
             border: none;
             color: var(--cream);
-            font-size: 14px;
+            font-size: 13px;
             cursor: pointer;
-            padding: 5px 12px;
+            padding: 5px 10px;
             border-radius: 20px;
             transition: all 0.3s ease;
             font-family: inherit;
         }
 
-        .lang-btn.active {
-            background: var(--gold);
-            color: var(--midnight);
-        }
+        .lang-btn.active { background: var(--gold); color: var(--midnight); }
+        .lang-btn:hover:not(.active) { background: rgba(201, 162, 39, 0.3); }
 
-        .lang-btn:hover:not(.active) {
-            background: rgba(201, 162, 39, 0.3);
-        }
-
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             background: linear-gradient(135deg, var(--midnight) 0%, var(--deep-blue) 100%);
@@ -104,19 +86,12 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A227' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.5;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; }
 
         .olive-branch {
             width: 120px;
@@ -141,14 +116,8 @@
             line-height: 1.2;
         }
 
-        body.hebrew .hero h1 {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
-
-        .hero h1 .gold {
-            color: var(--gold);
-            font-weight: 700;
-        }
+        body.hebrew .hero h1 { font-family: 'Frank Ruhl Libre', serif; }
+        .hero h1 .gold { color: var(--gold); font-weight: 700; }
 
         .hero-subtitle {
             font-size: clamp(1.1rem, 2.5vw, 1.4rem);
@@ -182,11 +151,7 @@
             animation: bounce 2s infinite;
         }
 
-        .scroll-indicator svg {
-            width: 30px;
-            height: 30px;
-            stroke: var(--gold);
-        }
+        .scroll-indicator svg { width: 30px; height: 30px; stroke: var(--gold); }
 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
@@ -194,7 +159,6 @@
             60% { transform: translateX(-50%) translateY(-5px); }
         }
 
-        /* Navigation */
         nav {
             background: var(--deep-blue);
             padding: 20px;
@@ -233,15 +197,9 @@
             transition: width 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--gold);
-        }
+        nav a:hover { color: var(--gold); }
+        nav a:hover::after { width: 100%; }
 
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Sections */
         section {
             padding: 100px 20px;
             max-width: 1200px;
@@ -257,9 +215,7 @@
             position: relative;
         }
 
-        body.hebrew .section-title {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
+        body.hebrew .section-title { font-family: 'Frank Ruhl Libre', serif; }
 
         .section-title::after {
             content: '';
@@ -270,10 +226,7 @@
             margin: 20px auto 0;
         }
 
-        /* About Section */
-        #about {
-            background: var(--cream);
-        }
+        #about { background: var(--cream); }
 
         .about-content {
             display: grid;
@@ -282,11 +235,7 @@
             align-items: start;
         }
 
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 768px) { .about-content { grid-template-columns: 1fr; } }
 
         .lineage-card {
             background: var(--deep-blue);
@@ -303,50 +252,21 @@
             margin-bottom: 20px;
         }
 
-        body.hebrew .lineage-card h3 {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
+        body.hebrew .lineage-card h3 { font-family: 'Frank Ruhl Libre', serif; }
 
         .lineage-item {
             padding: 15px 0;
             border-bottom: 1px solid rgba(201, 162, 39, 0.3);
         }
 
-        .lineage-item:last-child {
-            border-bottom: none;
-        }
+        .lineage-item:last-child { border-bottom: none; }
+        .lineage-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; }
+        .lineage-title { font-size: 0.9rem; opacity: 0.8; font-style: italic; }
+        .about-text p { margin-bottom: 20px; font-size: 1.1rem; }
+        .about-text .highlight { background: linear-gradient(transparent 60%, var(--gold-light) 60%); padding: 0 5px; }
 
-        .lineage-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .lineage-title {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-style: italic;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .about-text .highlight {
-            background: linear-gradient(transparent 60%, var(--gold-light) 60%);
-            padding: 0 5px;
-        }
-
-        /* Teachings Section */
-        #teachings {
-            background: var(--cream-dark);
-        }
-
-        .teaching-grid {
-            display: grid;
-            gap: 40px;
-        }
+        #teachings { background: var(--cream-dark); }
+        .teaching-grid { display: grid; gap: 40px; }
 
         .teaching-card {
             background: white;
@@ -371,9 +291,7 @@
             font-weight: 700;
         }
 
-        body.hebrew .teaching-number {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
+        body.hebrew .teaching-number { font-family: 'Frank Ruhl Libre', serif; }
 
         .teaching-title {
             font-family: 'Cormorant Garamond', serif;
@@ -381,26 +299,11 @@
             text-align: right;
         }
 
-        body.hebrew .teaching-title {
-            font-family: 'Frank Ruhl Libre', serif;
-            text-align: left;
-        }
+        body.hebrew .teaching-title { font-family: 'Frank Ruhl Libre', serif; text-align: left; }
 
-        .teaching-body {
-            padding: 40px;
-        }
-
-        .dual-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .dual-column {
-                grid-template-columns: 1fr;
-            }
-        }
+        .teaching-body { padding: 40px; }
+        .dual-column { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        @media (max-width: 768px) { .dual-column { grid-template-columns: 1fr; } }
 
         .column {
             padding: 30px;
@@ -417,27 +320,11 @@
             border-bottom: 2px solid var(--gold);
         }
 
-        body.hebrew .column h4 {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
-
-        .column.jewish {
-            border-left: 4px solid var(--olive);
-        }
-
-        body.hebrew .column.jewish {
-            border-left: none;
-            border-right: 4px solid var(--olive);
-        }
-
-        .column.christian {
-            border-left: 4px solid var(--gold);
-        }
-
-        body.hebrew .column.christian {
-            border-left: none;
-            border-right: 4px solid var(--gold);
-        }
+        body.hebrew .column h4 { font-family: 'Frank Ruhl Libre', serif; }
+        .column.jewish { border-left: 4px solid var(--olive); }
+        body.hebrew .column.jewish { border-left: none; border-right: 4px solid var(--olive); }
+        .column.christian { border-left: 4px solid var(--gold); }
+        body.hebrew .column.christian { border-left: none; border-right: 4px solid var(--gold); }
 
         .unity-statement {
             background: linear-gradient(135deg, var(--deep-blue), var(--midnight));
@@ -450,27 +337,11 @@
             font-style: italic;
         }
 
-        .unity-statement .icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: var(--gold);
-        }
+        .unity-statement .icon { font-size: 2rem; margin-bottom: 15px; color: var(--gold); }
 
-        /* Core Principles */
-        #principles {
-            background: var(--deep-blue);
-            color: var(--cream);
-        }
-
-        #principles .section-title {
-            color: var(--cream);
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        #principles { background: var(--deep-blue); color: var(--cream); }
+        #principles .section-title { color: var(--cream); }
+        .principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
         .principle-card {
             background: rgba(255,255,255,0.05);
@@ -493,20 +364,10 @@
             margin-bottom: 20px;
         }
 
-        body.hebrew .principle-card h3 {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
+        body.hebrew .principle-card h3 { font-family: 'Frank Ruhl Libre', serif; }
 
-        /* Scripture References */
-        #scripture {
-            background: var(--cream);
-        }
-
-        .scripture-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
+        #scripture { background: var(--cream); }
+        .scripture-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
 
         .scripture-card {
             background: white;
@@ -528,18 +389,8 @@
             line-height: 1;
         }
 
-        .scripture-text {
-            font-style: italic;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .scripture-ref {
-            color: var(--deep-blue);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
+        .scripture-text { font-style: italic; margin-bottom: 15px; position: relative; z-index: 1; }
+        .scripture-ref { color: var(--deep-blue); font-weight: 600; font-size: 0.9rem; }
 
         .scripture-source {
             display: inline-block;
@@ -549,42 +400,14 @@
             margin-left: 10px;
         }
 
-        body.hebrew .scripture-source {
-            margin-left: 0;
-            margin-right: 10px;
-        }
+        body.hebrew .scripture-source { margin-left: 0; margin-right: 10px; }
+        .scripture-source.jewish { background: var(--olive); color: white; }
+        .scripture-source.christian { background: var(--gold); color: var(--midnight); }
 
-        .scripture-source.jewish {
-            background: var(--olive);
-            color: white;
-        }
-
-        .scripture-source.christian {
-            background: var(--gold);
-            color: var(--midnight);
-        }
-
-        /* Contact Section */
-        #contact {
-            background: var(--midnight);
-            color: var(--cream);
-            text-align: center;
-        }
-
-        #contact .section-title {
-            color: var(--cream);
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-content p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
+        #contact { background: var(--midnight); color: var(--cream); text-align: center; }
+        #contact .section-title { color: var(--cream); }
+        .contact-content { max-width: 600px; margin: 0 auto; }
+        .contact-content p { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
 
         .contact-email {
             display: inline-block;
@@ -603,7 +426,6 @@
             box-shadow: 0 10px 30px rgba(201, 162, 39, 0.4);
         }
 
-        /* Footer */
         footer {
             background: var(--deep-blue);
             color: var(--cream);
@@ -618,53 +440,34 @@
             margin-bottom: 10px;
         }
 
-        body.hebrew .footer-brand {
-            font-family: 'Frank Ruhl Libre', serif;
-        }
+        body.hebrew .footer-brand { font-family: 'Frank Ruhl Libre', serif; }
+        footer p { opacity: 0.7; font-size: 0.9rem; }
 
-        footer p {
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
+        .lang-en, .lang-he, .lang-es { display: none; }
+        body.english .lang-en { display: block; }
+        body.hebrew .lang-he { display: block; }
+        body.spanish .lang-es { display: block; }
+        span.lang-en, span.lang-he, span.lang-es { display: none; }
+        body.english span.lang-en { display: inline; }
+        body.hebrew span.lang-he { display: inline; }
+        body.spanish span.lang-es { display: inline; }
 
-        /* Utility Classes */
-        .english-only {
-            display: block;
-        }
-
-        .hebrew-only {
-            display: none;
-        }
-
-        body.hebrew .english-only {
-            display: none;
-        }
-
-        body.hebrew .hebrew-only {
-            display: block;
-        }
-
-        /* Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body>
-    <!-- Language Toggle -->
+<body class="english">
     <div class="lang-toggle">
-        <button class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button class="lang-btn" onclick="setLanguage('he')">עברית</button>
+        <button class="lang-btn active" onclick="setLanguage('en')" data-lang="en">English</button>
+        <button class="lang-btn" onclick="setLanguage('he')" data-lang="he">עברית</button>
+        <button class="lang-btn" onclick="setLanguage('es')" data-lang="es">Español</button>
     </div>
 
-    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <svg class="olive-branch" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -681,20 +484,17 @@
                 <circle cx="70" cy="55" r="3" fill="#C9A227"/>
             </svg>
             
-            <h1 class="english-only">The <span class="gold">Levertoff</span> Legacy</h1>
-            <h1 class="hebrew-only">מורשת <span class="gold">לברטוף</span></h1>
+            <h1 class="lang-en">The <span class="gold">Levertoff</span> Legacy</h1>
+            <h1 class="lang-he">מורשת <span class="gold">לברטוף</span></h1>
+            <h1 class="lang-es">El Legado <span class="gold">Levertoff</span></h1>
             
-            <p class="hero-subtitle english-only">One Body. One Hope. One Messiah.</p>
-            <p class="hero-subtitle hebrew-only">גוף אחד. תקווה אחת. משיח אחד.</p>
+            <p class="hero-subtitle lang-en">One Body. One Hope. One Messiah.</p>
+            <p class="hero-subtitle lang-he">גוף אחד. תקווה אחת. משיח אחד.</p>
+            <p class="hero-subtitle lang-es">Un Cuerpo. Una Esperanza. Un Mesías.</p>
             
-            <div class="hero-verse english-only">
-                "For he himself is our peace, who has made us both one and has broken down in his flesh the dividing wall of hostility."
-                <br><em>— Ephesians 2:14</em>
-            </div>
-            <div class="hero-verse hebrew-only">
-                "כִּי הוּא שְׁלוֹמֵנוּ אֲשֶׁר עָשָׂה אֶת הַשְּׁנַיִם אֶחָד וְהָרַס אֶת הַמְּחִצָּה הַחוֹצֶצֶת"
-                <br><em>— אל האפסים ב׳:י״ד</em>
-            </div>
+            <div class="hero-verse lang-en">"For he himself is our peace, who has made us both one and has broken down in his flesh the dividing wall of hostility."<br><em>— Ephesians 2:14</em></div>
+            <div class="hero-verse lang-he">"כִּי הוּא שְׁלוֹמֵנוּ אֲשֶׁר עָשָׂה אֶת הַשְּׁנַיִם אֶחָד וְהָרַס אֶת הַמְּחִצָּה הַחוֹצֶצֶת"<br><em>— אל האפסים ב׳:י״ד</em></div>
+            <div class="hero-verse lang-es">"Porque él es nuestra paz, que de ambos pueblos hizo uno, derribando la pared intermedia de separación."<br><em>— Efesios 2:14</em></div>
         </div>
         
         <div class="scroll-indicator">
@@ -704,512 +504,521 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about" class="english-only">About</a><a href="#about" class="hebrew-only">אודות</a></li>
-            <li><a href="#teachings" class="english-only">Teachings</a><a href="#teachings" class="hebrew-only">תורה</a></li>
-            <li><a href="#principles" class="english-only">Principles</a><a href="#principles" class="hebrew-only">עקרונות</a></li>
-            <li><a href="#scripture" class="english-only">Scripture</a><a href="#scripture" class="hebrew-only">כתבי הקודש</a></li>
-            <li><a href="#contact" class="english-only">Contact</a><a href="#contact" class="hebrew-only">צור קשר</a></li>
+            <li><a href="#about"><span class="lang-en">About</span><span class="lang-he">אודות</span><span class="lang-es">Acerca</span></a></li>
+            <li><a href="#teachings"><span class="lang-en">Teachings</span><span class="lang-he">תורה</span><span class="lang-es">Enseñanzas</span></a></li>
+            <li><a href="#principles"><span class="lang-en">Principles</span><span class="lang-he">עקרונות</span><span class="lang-es">Principios</span></a></li>
+            <li><a href="#scripture"><span class="lang-en">Scripture</span><span class="lang-he">כתבי הקודש</span><span class="lang-es">Escrituras</span></a></li>
+            <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span><span class="lang-es">Contacto</span></a></li>
         </ul>
     </nav>
 
-    <!-- About Section -->
     <section id="about">
-        <h2 class="section-title english-only">A Legacy Continued</h2>
-        <h2 class="section-title hebrew-only">מורשת שנמשכת</h2>
+        <h2 class="section-title lang-en">A Legacy Continued</h2>
+        <h2 class="section-title lang-he">מורשת שנמשכת</h2>
+        <h2 class="section-title lang-es">Un Legado que Continúa</h2>
         
         <div class="about-content">
             <div class="lineage-card">
-                <h3 class="english-only">The Lineage</h3>
-                <h3 class="hebrew-only">השושלת</h3>
+                <h3 class="lang-en">The Lineage</h3>
+                <h3 class="lang-he">השושלת</h3>
+                <h3 class="lang-es">El Linaje</h3>
                 
                 <div class="lineage-item">
                     <div class="lineage-name">Rabbi Schneur Zalman of Liadi</div>
-                    <div class="lineage-title english-only">Founder of Chabad Hasidism (1745–1812)</div>
-                    <div class="lineage-title hebrew-only">מייסד חסידות חב״ד (1745–1812)</div>
+                    <div class="lineage-title lang-en">Founder of Chabad Hasidism (1745–1812)</div>
+                    <div class="lineage-title lang-he">מייסד חסידות חב״ד (1745–1812)</div>
+                    <div class="lineage-title lang-es">Fundador del Jasidismo Jabad (1745–1812)</div>
                 </div>
                 <div class="lineage-item">
                     <div class="lineage-name">Paul Philip Levertoff</div>
-                    <div class="lineage-title english-only">Great-grandfather · Pioneer of Hebrew Christianity (1878–1954)</div>
-                    <div class="lineage-title hebrew-only">סבא רבא · חלוץ הנצרות העברית (1878–1954)</div>
+                    <div class="lineage-title lang-en">Great-grandfather · Pioneer of Hebrew Christianity (1878–1954)</div>
+                    <div class="lineage-title lang-he">סבא רבא · חלוץ הנצרות העברית (1878–1954)</div>
+                    <div class="lineage-title lang-es">Bisabuelo · Pionero del Cristianismo Hebreo (1878–1954)</div>
                 </div>
                 <div class="lineage-item">
                     <div class="lineage-name">Denise Levertov</div>
-                    <div class="lineage-title english-only">Great-aunt · Poet of Spiritual Vision (1923–1997)</div>
-                    <div class="lineage-title hebrew-only">דודה רבא · משוררת החזון הרוחני (1923–1997)</div>
+                    <div class="lineage-title lang-en">Great-aunt · Poet of Spiritual Vision (1923–1997)</div>
+                    <div class="lineage-title lang-he">דודה רבא · משוררת החזון הרוחני (1923–1997)</div>
+                    <div class="lineage-title lang-es">Tía abuela · Poetisa de Visión Espiritual (1923–1997)</div>
                 </div>
             </div>
             
             <div class="about-text">
-                <p class="english-only">
-                    I am the grandson of <span class="highlight">Paul Philip Levertoff</span> — the Hasidic Jew who recognized Yeshua as Messiah while never abandoning his Jewish identity. He spent his life building bridges between Jewish mysticism and Christian faith, translating the Zohar into English, and establishing worship that honored both traditions.
-                </p>
-                <p class="hebrew-only">
-                    אני נכדו של <span class="highlight">פאול פיליפ לברטוף</span> — היהודי החסידי שזיהה את ישוע כמשיח מבלי לנטוש את זהותו היהודית. הוא הקדיש את חייו לבניית גשרים בין המיסטיקה היהודית לאמונה הנוצרית, תרגם את הזוהר לאנגלית, וייסד סדרי פולחן שכיבדו את שתי המסורות.
-                </p>
+                <p class="lang-en">I am the grandson of <span class="highlight">Paul Philip Levertoff</span> — the Hasidic Jew who recognized Yeshua as Messiah while never abandoning his Jewish identity. He spent his life building bridges between Jewish mysticism and Christian faith, translating the Zohar into English, and establishing worship that honored both traditions.</p>
+                <p class="lang-he">אני נכדו של <span class="highlight">פאול פיליפ לברטוף</span> — היהודי החסידי שזיהה את ישוע כמשיח מבלי לנטוש את זהותו היהודית. הוא הקדיש את חייו לבניית גשרים בין המיסטיקה היהודית לאמונה הנוצרית, תרגם את הזוהר לאנגלית, וייסד סדרי פולחן שכיבדו את שתי המסורות.</p>
+                <p class="lang-es">Soy el nieto de <span class="highlight">Paul Philip Levertoff</span> — el judío jasídico que reconoció a Yeshúa como Mesías sin abandonar jamás su identidad judía. Dedicó su vida a construir puentes entre el misticismo judío y la fe cristiana, traduciendo el Zohar al inglés y estableciendo una adoración que honraba ambas tradiciones.</p>
                 
-                <p class="english-only">
-                    My great-grandfather believed his own father was <span class="highlight">"near the Kingdom"</span> — that the gap between faithful Judaism and recognition of the Messiah was not a chasm but a threshold. He saw what I now articulate more fully: there is no disharmony between Jewish and Christian messianic hope. We await the same victory. We are one body.
-                </p>
-                <p class="hebrew-only">
-                    סבא רבא שלי האמין שאביו היה <span class="highlight">"קרוב למלכות"</span> — שהפער בין יהדות נאמנה לבין הכרה במשיח אינו תהום אלא סף. הוא ראה את מה שאני עכשיו מביע במלואו: אין חוסר הרמוניה בין התקווה המשיחית היהודית לנוצרית. אנו מחכים לאותו ניצחון. אנו גוף אחד.
-                </p>
+                <p class="lang-en">My great-grandfather believed his own father was <span class="highlight">"near the Kingdom"</span> — that the gap between faithful Judaism and recognition of the Messiah was not a chasm but a threshold. He saw what I now articulate more fully: there is no disharmony between Jewish and Christian messianic hope. We await the same victory. We are one body.</p>
+                <p class="lang-he">סבא רבא שלי האמין שאביו היה <span class="highlight">"קרוב למלכות"</span> — שהפער בין יהדות נאמנה לבין הכרה במשיח אינו תהום אלא סף. הוא ראה את מה שאני עכשיו מביע במלואו: אין חוסר הרמוניה בין התקווה המשיחית היהודית לנוצרית. אנו מחכים לאותו ניצחון. אנו גוף אחד.</p>
+                <p class="lang-es">Mi bisabuelo creía que su propio padre estaba <span class="highlight">"cerca del Reino"</span> — que la brecha entre el judaísmo fiel y el reconocimiento del Mesías no era un abismo sino un umbral. Él vio lo que ahora articulo más plenamente: no hay desarmonía entre la esperanza mesiánica judía y cristiana. Esperamos la misma victoria. Somos un solo cuerpo.</p>
                 
-                <p class="english-only">
-                    This ministry continues his work — not to convert Jews to Christianity or Christians to Judaism, but to reveal the unity that was always there. The wall was temporary. The glory reveals what has always been true.
-                </p>
-                <p class="hebrew-only">
-                    שירות זה ממשיך את עבודתו — לא להמיר יהודים לנצרות או נוצרים ליהדות, אלא לגלות את האחדות שתמיד הייתה שם. החומה הייתה זמנית. הכבוד מגלה את מה שתמיד היה אמת.
-                </p>
+                <p class="lang-en">This ministry continues his work — not to convert Jews to Christianity or Christians to Judaism, but to reveal the unity that was always there. The wall was temporary. The glory reveals what has always been true.</p>
+                <p class="lang-he">שירות זה ממשיך את עבודתו — לא להמיר יהודים לנצרות או נוצרים ליהדות, אלא לגלות את האחדות שתמיד הייתה שם. החומה הייתה זמנית. הכבוד מגלה את מה שתמיד היה אמת.</p>
+                <p class="lang-es">Este ministerio continúa su obra — no para convertir judíos al cristianismo ni cristianos al judaísmo, sino para revelar la unidad que siempre estuvo allí. El muro era temporal. La gloria revela lo que siempre fue verdad.</p>
             </div>
         </div>
     </section>
 
-    <!-- Teachings Section -->
     <section id="teachings">
-        <h2 class="section-title english-only">The Core Teachings</h2>
-        <h2 class="section-title hebrew-only">התורות המרכזיות</h2>
+        <h2 class="section-title lang-en">The Core Teachings</h2>
+        <h2 class="section-title lang-he">התורות המרכזיות</h2>
+        <h2 class="section-title lang-es">Las Enseñanzas Centrales</h2>
         
         <div class="teaching-grid">
-            <!-- Teaching 1 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">I</span>
-                    <h3 class="teaching-title english-only">Both Await the Same Victory</h3>
-                    <h3 class="teaching-title hebrew-only">שניהם מחכים לאותו ניצחון</h3>
+                    <h3 class="teaching-title lang-en">Both Await the Same Victory</h3>
+                    <h3 class="teaching-title lang-he">שניהם מחכים לאותו ניצחון</h3>
+                    <h3 class="teaching-title lang-es">Ambos Esperan la Misma Victoria</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">Jews await Mashiach ben David — the triumphant king who will defeat enemies, restore Israel, rebuild the Temple, and bring universal peace. This is the messianic hope as the prophets described it. The Messiah has not yet come because these things have not yet happened.</p>
-                            <p class="hebrew-only">יהודים מחכים למשיח בן דוד — המלך המנצח שינצח אויבים, ישיב את ישראל, יבנה מחדש את בית המקדש ויביא שלום עולמי. זוהי התקווה המשיחית כפי שהנביאים תיארו אותה. המשיח עדיין לא בא כי דברים אלה עדיין לא קרו.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">Jews await Mashiach ben David — the triumphant king who will defeat enemies, restore Israel, rebuild the Temple, and bring universal peace. The Messiah has not yet come because these things have not yet happened.</p>
+                            <p class="lang-he">יהודים מחכים למשיח בן דוד — המלך המנצח שינצח אויבים, ישיב את ישראל, יבנה מחדש את בית המקדש ויביא שלום עולמי. המשיח עדיין לא בא כי דברים אלה עדיין לא קרו.</p>
+                            <p class="lang-es">Los judíos esperan al Mashíaj ben David — el rey triunfante que derrotará a los enemigos, restaurará a Israel, reconstruirá el Templo y traerá paz universal. El Mesías aún no ha venido porque estas cosas aún no han sucedido.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">Christians await the Second Coming of Christ — when Jesus returns in glory to judge the living and the dead, establish his kingdom, and make all things new. The kingdom has not yet come in fullness. Evil has not been visibly defeated. Christians too are waiting.</p>
-                            <p class="hebrew-only">נוצרים מחכים לביאה השנייה של המשיח — כאשר ישוע ישוב בכבוד לשפוט את החיים והמתים, יקים את מלכותו ויחדש את הכל. המלכות עדיין לא באה במלואה. הרוע לא נוצח באופן גלוי. גם נוצרים מחכים.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">Christians await the Second Coming of Christ — when Jesus returns in glory to judge the living and the dead, establish his kingdom, and make all things new. Christians too are waiting.</p>
+                            <p class="lang-he">נוצרים מחכים לביאה השנייה של המשיח — כאשר ישוע ישוב בכבוד לשפוט את החיים והמתים, יקים את מלכותו ויחדש את הכל. גם נוצרים מחכים.</p>
+                            <p class="lang-es">Los cristianos esperan la Segunda Venida de Cristo — cuando Jesús regrese en gloria para juzgar a los vivos y a los muertos, establecer su reino y hacer nuevas todas las cosas. Los cristianos también están esperando.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">Both traditions await the same event: the Messiah coming in glory, visibly, undeniably, to reign. The only disagreement is whether he has been identified in advance.</span>
-                        <span class="hebrew-only">שתי המסורות מחכות לאותו אירוע: המשיח בא בכבוד, באופן גלוי, בלתי ניתן להכחשה, למלוך. המחלוקת היחידה היא האם הוא זוהה מראש.</span>
+                        <span class="lang-en">Both traditions await the same event: the Messiah coming in glory, visibly, undeniably, to reign. The only disagreement is whether he has been identified in advance.</span>
+                        <span class="lang-he">שתי המסורות מחכות לאותו אירוע: המשיח בא בכבוד, באופן גלוי, בלתי ניתן להכחשה, למלוך. המחלוקת היחידה היא האם הוא זוהה מראש.</span>
+                        <span class="lang-es">Ambas tradiciones esperan el mismo evento: el Mesías viniendo en gloria, visiblemente, innegablemente, para reinar. El único desacuerdo es si ya ha sido identificado de antemano.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 2 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">II</span>
-                    <h3 class="teaching-title english-only">The Suffering Messiah Precedes the Triumphant</h3>
-                    <h3 class="teaching-title hebrew-only">המשיח הסובל קודם למנצח</h3>
+                    <h3 class="teaching-title lang-en">The Suffering Messiah Precedes the Triumphant</h3>
+                    <h3 class="teaching-title lang-he">המשיח הסובל קודם למנצח</h3>
+                    <h3 class="teaching-title lang-es">El Mesías Sufriente Precede al Triunfante</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">Jewish tradition speaks of Mashiach ben Yosef — a suffering, rejected messianic figure who dies before the triumph. The Talmud, Zohar, and Midrashim acknowledge this figure. He is rejected by his brothers, like Joseph. He bears the afflictions of Israel. He precedes Mashiach ben David.</p>
-                            <p class="hebrew-only">המסורת היהודית מדברת על משיח בן יוסף — דמות משיחית סובלת ונדחית שמתה לפני הניצחון. התלמוד, הזוהר והמדרשים מכירים בדמות זו. הוא נדחה על ידי אחיו, כמו יוסף. הוא נושא את סבלות ישראל. הוא קודם למשיח בן דוד.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">Jewish tradition speaks of Mashiach ben Yosef — a suffering, rejected messianic figure who dies before the triumph. The Talmud, Zohar, and Midrashim acknowledge this figure who precedes Mashiach ben David.</p>
+                            <p class="lang-he">המסורת היהודית מדברת על משיח בן יוסף — דמות משיחית סובלת ונדחית שמתה לפני הניצחון. התלמוד, הזוהר והמדרשים מכירים בדמות זו שקודמת למשיח בן דוד.</p>
+                            <p class="lang-es">La tradición judía habla del Mashíaj ben Yosef — una figura mesiánica sufriente y rechazada que muere antes del triunfo. El Talmud, el Zohar y los Midrashim reconocen esta figura que precede al Mashíaj ben David.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">Christians believe Jesus came first as the suffering servant — rejected, crucified, bearing the sins of many. He will return as the conquering king. Two comings, one Messiah. The suffering came first; the triumph is still to come.</p>
-                            <p class="hebrew-only">נוצרים מאמינים שישוע בא תחילה כעבד הסובל — נדחה, נצלב, נושא את חטאי רבים. הוא ישוב כמלך המנצח. שתי ביאות, משיח אחד. הסבל בא ראשון; הניצחון עדיין עתיד לבוא.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">Christians believe Jesus came first as the suffering servant — rejected, crucified, bearing the sins of many. He will return as the conquering king. Two comings, one Messiah.</p>
+                            <p class="lang-he">נוצרים מאמינים שישוע בא תחילה כעבד הסובל — נדחה, נצלב, נושא את חטאי רבים. הוא ישוב כמלך המנצח. שתי ביאות, משיח אחד.</p>
+                            <p class="lang-es">Los cristianos creen que Jesús vino primero como el siervo sufriente — rechazado, crucificado, llevando los pecados de muchos. Regresará como el rey conquistador. Dos venidas, un Mesías.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">The sequence is the same in both traditions: suffering first, triumph after. Jews see two figures; Christians see two comings. The pattern is identical.</span>
-                        <span class="hebrew-only">הסדר זהה בשתי המסורות: סבל קודם, ניצחון אחר כך. יהודים רואים שתי דמויות; נוצרים רואים שתי ביאות. הדפוס זהה.</span>
+                        <span class="lang-en">The sequence is the same in both traditions: suffering first, triumph after. Jews see two figures; Christians see two comings. The pattern is identical.</span>
+                        <span class="lang-he">הסדר זהה בשתי המסורות: סבל קודם, ניצחון אחר כך. יהודים רואים שתי דמויות; נוצרים רואים שתי ביאות. הדפוס זהה.</span>
+                        <span class="lang-es">La secuencia es la misma en ambas tradiciones: primero el sufrimiento, después el triunfo. Los judíos ven dos figuras; los cristianos ven dos venidas. El patrón es idéntico.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 3 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">III</span>
-                    <h3 class="teaching-title english-only">Jews Are Right to Wait</h3>
-                    <h3 class="teaching-title hebrew-only">יהודים צודקים להמתין</h3>
+                    <h3 class="teaching-title lang-en">Jews Are Right to Wait</h3>
+                    <h3 class="teaching-title lang-he">יהודים צודקים להמתין</h3>
+                    <h3 class="teaching-title lang-es">Los Judíos Tienen Razón en Esperar</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">The prophets described a triumphant Messiah. Jesus did not fulfill that description in his lifetime. The world was not transformed. Israel was not restored. Jews hold faithfully to what they were promised: visible, undeniable victory. This is fidelity, not stubbornness.</p>
-                            <p class="hebrew-only">הנביאים תיארו משיח מנצח. ישוע לא מילא את התיאור הזה בחייו. העולם לא השתנה. ישראל לא שוקמה. יהודים מחזיקים בנאמנות למה שהובטח להם: ניצחון גלוי, בלתי ניתן להכחשה. זו נאמנות, לא עקשנות.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">The prophets described a triumphant Messiah. Jesus did not fulfill that description in his lifetime. Jews hold faithfully to what they were promised: visible, undeniable victory. This is fidelity, not stubbornness.</p>
+                            <p class="lang-he">הנביאים תיארו משיח מנצח. ישוע לא מילא את התיאור הזה בחייו. יהודים מחזיקים בנאמנות למה שהובטח להם: ניצחון גלוי, בלתי ניתן להכחשה. זו נאמנות, לא עקשנות.</p>
+                            <p class="lang-es">Los profetas describieron un Mesías triunfante. Jesús no cumplió esa descripción en su vida. Los judíos se mantienen fieles a lo que les fue prometido: victoria visible e innegable. Esto es fidelidad, no terquedad.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">Christians acknowledge that the triumphant fulfillment is still future. The kingdom has not come in fullness. They too are waiting for the visible reign, the defeat of evil, the resurrection. The victory Jesus brings is still ahead — for Christians too.</p>
-                            <p class="hebrew-only">נוצרים מודים שההגשמה המנצחת עדיין בעתיד. המלכות לא באה במלואה. גם הם מחכים למלכות הגלויה, להביסת הרוע, לתחייה. הניצחון שישוע מביא עדיין לפנינו — גם לנוצרים.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">Christians acknowledge that the triumphant fulfillment is still future. They too are waiting for the visible reign, the defeat of evil, the resurrection. The victory Jesus brings is still ahead.</p>
+                            <p class="lang-he">נוצרים מודים שההגשמה המנצחת עדיין בעתיד. גם הם מחכים למלכות הגלויה, להביסת הרוע, לתחייה. הניצחון שישוע מביא עדיין לפנינו.</p>
+                            <p class="lang-es">Los cristianos reconocen que el cumplimiento triunfante aún es futuro. Ellos también esperan el reinado visible, la derrota del mal, la resurrección. La victoria que Jesús trae aún está por delante.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">The event that would compel recognition has not yet occurred. Jews await what Christians also await. Both hold the same hope. Jewish non-recognition is not failure — it is patience for what is promised.</span>
-                        <span class="hebrew-only">האירוע שיכריח הכרה עדיין לא קרה. יהודים מחכים למה שגם נוצרים מחכים. לשניהם אותה תקווה. אי-ההכרה היהודית אינה כישלון — היא סבלנות למה שהובטח.</span>
+                        <span class="lang-en">The event that would compel recognition has not yet occurred. Jews await what Christians also await. Jewish non-recognition is not failure — it is patience for what is promised.</span>
+                        <span class="lang-he">האירוע שיכריח הכרה עדיין לא קרה. יהודים מחכים למה שגם נוצרים מחכים. אי-ההכרה היהודית אינה כישלון — היא סבלנות למה שהובטח.</span>
+                        <span class="lang-es">El evento que obligaría al reconocimiento aún no ha ocurrido. Los judíos esperan lo que los cristianos también esperan. El no-reconocimiento judío no es fracaso — es paciencia por lo prometido.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 4 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">IV</span>
-                    <h3 class="teaching-title english-only">The Suffering Messiah Was for the Gentiles</h3>
-                    <h3 class="teaching-title hebrew-only">המשיח הסובל היה בשביל הגויים</h3>
+                    <h3 class="teaching-title lang-en">The Suffering Messiah Was for the Gentiles</h3>
+                    <h3 class="teaching-title lang-he">המשיח הסובל היה בשביל הגויים</h3>
+                    <h3 class="teaching-title lang-es">El Mesías Sufriente Fue para los Gentiles</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">Jews already had the covenant, the Torah, the prophets, the promises. They were already near to God. The Noahide laws established that Gentiles could be saved through basic moral observance — but they remained outside the covenant family of Israel.</p>
-                            <p class="hebrew-only">ליהודים כבר היה הברית, התורה, הנביאים, ההבטחות. הם כבר היו קרובים לאלוהים. חוקי נח קבעו שגויים יכולים להיוושע דרך שמירה מוסרית בסיסית — אך הם נשארו מחוץ למשפחת הברית של ישראל.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">Jews already had the covenant, the Torah, the prophets, the promises. They were already near to God. The Noahide laws established that Gentiles could be saved through basic moral observance.</p>
+                            <p class="lang-he">ליהודים כבר היה הברית, התורה, הנביאים, ההבטחות. הם כבר היו קרובים לאלוהים. חוקי נח קבעו שגויים יכולים להיוושע דרך שמירה מוסרית בסיסית.</p>
+                            <p class="lang-es">Los judíos ya tenían el pacto, la Torá, los profetas, las promesas. Ya estaban cerca de Dios. Las leyes de Noé establecieron que los gentiles podían salvarse mediante la observancia moral básica.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">The suffering Messiah opened a door for Gentiles — a way to the God of Israel without becoming Jewish. Through faith in Jesus, Gentiles are grafted into the olive tree, made children of Abraham, brought near to God. The first coming was the Gentile mission.</p>
-                            <p class="hebrew-only">המשיח הסובל פתח דלת לגויים — דרך לאלוהי ישראל מבלי להפוך ליהודים. דרך אמונה בישוע, גויים מורכבים לעץ הזית, נעשים בני אברהם, מקורבים לאלוהים. הביאה הראשונה הייתה המשימה לגויים.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">The suffering Messiah opened a door for Gentiles — a way to the God of Israel without becoming Jewish. Through faith in Jesus, Gentiles are grafted into the olive tree. The first coming was the Gentile mission.</p>
+                            <p class="lang-he">המשיח הסובל פתח דלת לגויים — דרך לאלוהי ישראל מבלי להפוך ליהודים. דרך אמונה בישוע, גויים מורכבים לעץ הזית. הביאה הראשונה הייתה המשימה לגויים.</p>
+                            <p class="lang-es">El Mesías sufriente abrió una puerta para los gentiles — un camino hacia el Dios de Israel sin convertirse en judíos. A través de la fe en Jesús, los gentiles son injertados en el olivo. La primera venida fue la misión a los gentiles.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">Jews didn't need the suffering servant in the same way — they were already in covenant. The first coming expanded salvation to the nations. The second coming fulfills what was promised to Israel. Different doors, same house.</span>
-                        <span class="hebrew-only">יהודים לא היו צריכים את העבד הסובל באותו אופן — הם כבר היו בברית. הביאה הראשונה הרחיבה את הישועה לעמים. הביאה השנייה מגשימה את מה שהובטח לישראל. דלתות שונות, אותו בית.</span>
+                        <span class="lang-en">Jews didn't need the suffering servant in the same way — they were already in covenant. The first coming expanded salvation to the nations. Different doors, same house.</span>
+                        <span class="lang-he">יהודים לא היו צריכים את העבד הסובל באותו אופן — הם כבר היו בברית. הביאה הראשונה הרחיבה את הישועה לעמים. דלתות שונות, אותו בית.</span>
+                        <span class="lang-es">Los judíos no necesitaban al siervo sufriente de la misma manera — ya estaban en el pacto. La primera venida expandió la salvación a las naciones. Puertas diferentes, misma casa.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 5 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">V</span>
-                    <h3 class="teaching-title english-only">Both Are Saved Through the Messiah</h3>
-                    <h3 class="teaching-title hebrew-only">שניהם נושעים דרך המשיח</h3>
+                    <h3 class="teaching-title lang-en">Both Are Saved Through the Messiah</h3>
+                    <h3 class="teaching-title lang-he">שניהם נושעים דרך המשיח</h3>
+                    <h3 class="teaching-title lang-es">Ambos Son Salvos a Través del Mesías</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">Jews affirm that salvation comes through the Messiah. They await him. Their hope is in his coming. The Messiah is central to Jewish eschatology — the one through whom God will redeem Israel and the world.</p>
-                            <p class="hebrew-only">יהודים מאשרים שהישועה באה דרך המשיח. הם מחכים לו. תקוותם בביאתו. המשיח הוא מרכזי באסכטולוגיה היהודית — זה שדרכו אלוהים יגאל את ישראל והעולם.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">Jews affirm that salvation comes through the Messiah. They await him. The Messiah is central to Jewish eschatology — the one through whom God will redeem Israel and the world.</p>
+                            <p class="lang-he">יהודים מאשרים שהישועה באה דרך המשיח. הם מחכים לו. המשיח הוא מרכזי באסכטולוגיה היהודית — זה שדרכו אלוהים יגאל את ישראל והעולם.</p>
+                            <p class="lang-es">Los judíos afirman que la salvación viene a través del Mesías. Lo esperan. El Mesías es central en la escatología judía — aquel a través de quien Dios redimirá a Israel y al mundo.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">Christians affirm that salvation comes through the Messiah — Jesus. Faith in him is the door to the Father. He is the way, the truth, the life. Through him, both Jews and Gentiles have access to God.</p>
-                            <p class="hebrew-only">נוצרים מאשרים שהישועה באה דרך המשיח — ישוע. אמונה בו היא הדלת לאב. הוא הדרך, האמת, החיים. דרכו, גם יהודים וגם גויים יש להם גישה לאלוהים.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">Christians affirm that salvation comes through the Messiah — Jesus. Faith in him is the door to the Father. Through him, both Jews and Gentiles have access to God.</p>
+                            <p class="lang-he">נוצרים מאשרים שהישועה באה דרך המשיח — ישוע. אמונה בו היא הדלת לאב. דרכו, גם יהודים וגם גויים יש להם גישה לאלוהים.</p>
+                            <p class="lang-es">Los cristianos afirman que la salvación viene a través del Mesías — Jesús. La fe en él es la puerta al Padre. A través de él, tanto judíos como gentiles tienen acceso a Dios.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">The mechanism is the same: salvation through the Messiah. The only question is identity and timing — and that question resolves when every eye sees him in glory. Both are saved through the same door.</span>
-                        <span class="hebrew-only">המנגנון זהה: ישועה דרך המשיח. השאלה היחידה היא זהות ותזמון — ושאלה זו נפתרת כאשר כל עין תראה אותו בכבוד. שניהם נושעים דרך אותה דלת.</span>
+                        <span class="lang-en">The mechanism is the same: salvation through the Messiah. The only question is identity and timing — and that question resolves when every eye sees him in glory.</span>
+                        <span class="lang-he">המנגנון זהה: ישועה דרך המשיח. השאלה היחידה היא זהות ותזמון — ושאלה זו נפתרת כאשר כל עין תראה אותו בכבוד.</span>
+                        <span class="lang-es">El mecanismo es el mismo: salvación a través del Mesías. La única pregunta es identidad y tiempo — y esa pregunta se resuelve cuando cada ojo lo vea en gloria.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 6 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">VI</span>
-                    <h3 class="teaching-title english-only">God Is Outside Time</h3>
-                    <h3 class="teaching-title hebrew-only">אלוהים מחוץ לזמן</h3>
+                    <h3 class="teaching-title lang-en">God Is Outside Time</h3>
+                    <h3 class="teaching-title lang-he">אלוהים מחוץ לזמן</h3>
+                    <h3 class="teaching-title lang-es">Dios Está Fuera del Tiempo</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">God is eternal — without beginning or end. He exists beyond time. The patriarchs, the prophets, and all the righteous are held in his eternal presence. Salvation is not bound by chronology when seen from God's perspective.</p>
-                            <p class="hebrew-only">אלוהים הוא נצחי — ללא התחלה או סוף. הוא קיים מעבר לזמן. האבות, הנביאים וכל הצדיקים מוחזקים בנוכחותו הנצחית. הישועה אינה כבולה בכרונולוגיה כשרואים אותה מנקודת המבט של אלוהים.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">God is eternal — without beginning or end. He exists beyond time. Salvation is not bound by chronology when seen from God's perspective.</p>
+                            <p class="lang-he">אלוהים הוא נצחי — ללא התחלה או סוף. הוא קיים מעבר לזמן. הישועה אינה כבולה בכרונולוגיה כשרואים אותה מנקודת המבט של אלוהים.</p>
+                            <p class="lang-es">Dios es eterno — sin principio ni fin. Existe más allá del tiempo. La salvación no está limitada por la cronología cuando se ve desde la perspectiva de Dios.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">The Lamb was slain from the foundation of the world. Christ's salvific work applies backward and forward through all of history. Abraham was saved by faith. Moses was saved by faith. The cross is an eternal event, not merely a historical one.</p>
-                            <p class="hebrew-only">השה נשחט מיסוד העולם. פעולתו המושיעה של המשיח חלה אחורה וקדימה דרך כל ההיסטוריה. אברהם נושע באמונה. משה נושע באמונה. הצלב הוא אירוע נצחי, לא רק היסטורי.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">The Lamb was slain from the foundation of the world. Christ's salvific work applies backward and forward through all of history. The cross is an eternal event.</p>
+                            <p class="lang-he">השה נשחט מיסוד העולם. פעולתו המושיעה של המשיח חלה אחורה וקדימה דרך כל ההיסטוריה. הצלב הוא אירוע נצחי.</p>
+                            <p class="lang-es">El Cordero fue inmolado desde la fundación del mundo. La obra salvífica de Cristo se aplica hacia atrás y hacia adelante a través de toda la historia. La cruz es un evento eterno.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">From God's eternal perspective, the Messiah's salvation simply IS — applying to all who trust in God's promise, whether they lived before or after any particular moment in history. The argument about timing is a conversation within time; God holds it all.</span>
-                        <span class="hebrew-only">מנקודת המבט הנצחית של אלוהים, ישועת המשיח פשוט קיימת — חלה על כל מי שבוטח בהבטחת אלוהים, בין אם חי לפני או אחרי רגע מסוים בהיסטוריה. הוויכוח על תזמון הוא שיחה בתוך הזמן; אלוהים מחזיק את הכל.</span>
+                        <span class="lang-en">From God's eternal perspective, the Messiah's salvation simply IS — applying to all who trust in God's promise. The argument about timing is a conversation within time; God holds it all.</span>
+                        <span class="lang-he">מנקודת המבט הנצחית של אלוהים, ישועת המשיח פשוט קיימת — חלה על כל מי שבוטח בהבטחת אלוהים. הוויכוח על תזמון הוא שיחה בתוך הזמן; אלוהים מחזיק את הכל.</span>
+                        <span class="lang-es">Desde la perspectiva eterna de Dios, la salvación del Mesías simplemente ES — aplicándose a todos los que confían en la promesa de Dios. El argumento sobre el tiempo es una conversación dentro del tiempo; Dios lo sostiene todo.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 7 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">VII</span>
-                    <h3 class="teaching-title english-only">Every Eye Will See</h3>
-                    <h3 class="teaching-title hebrew-only">כל עין תראה</h3>
+                    <h3 class="teaching-title lang-en">Every Eye Will See</h3>
+                    <h3 class="teaching-title lang-he">כל עין תראה</h3>
+                    <h3 class="teaching-title lang-es">Todo Ojo Verá</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">When the Messiah comes, it will be unmistakable. Universal. Undeniable. No ambiguity. No need for persuasion. The wolf will lie down with the lamb. The Temple will stand. The dead will rise. Everyone will know.</p>
-                            <p class="hebrew-only">כאשר המשיח יבוא, זה יהיה חד משמעי. אוניברסלי. בלתי ניתן להכחשה. ללא עמימות. ללא צורך בשכנוע. הזאב ישכון עם הכבש. בית המקדש יעמוד. המתים יקומו. כולם יידעו.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">When the Messiah comes, it will be unmistakable. Universal. Undeniable. No ambiguity. The wolf will lie down with the lamb. Everyone will know.</p>
+                            <p class="lang-he">כאשר המשיח יבוא, זה יהיה חד משמעי. אוניברסלי. בלתי ניתן להכחשה. ללא עמימות. הזאב ישכון עם הכבש. כולם יידעו.</p>
+                            <p class="lang-es">Cuando el Mesías venga, será inconfundible. Universal. Innegable. Sin ambigüedad. El lobo morará con el cordero. Todos sabrán.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">"Every eye will see him" (Revelation 1:7). When Christ returns in glory, there will be no doubt. Every knee will bow. Every tongue will confess. The question of his identity will be answered universally and finally.</p>
-                            <p class="hebrew-only">"כל עין תראה אותו" (התגלות א׳:ז׳). כאשר המשיח ישוב בכבוד, לא יהיה ספק. כל ברך תכרע. כל לשון תודה. שאלת זהותו תיענה באופן אוניברסלי וסופי.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">"Every eye will see him" (Revelation 1:7). When Christ returns in glory, there will be no doubt. Every knee will bow. Every tongue will confess.</p>
+                            <p class="lang-he">"כל עין תראה אותו" (התגלות א׳:ז׳). כאשר המשיח ישוב בכבוד, לא יהיה ספק. כל ברך תכרע. כל לשון תודה.</p>
+                            <p class="lang-es">"Todo ojo le verá" (Apocalipsis 1:7). Cuando Cristo regrese en gloria, no habrá duda. Toda rodilla se doblará. Toda lengua confesará.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">Both traditions agree: recognition will be universal when the glory appears. The current disagreement is a waiting game. When he comes, the argument ends — not because one side loses, but because both were looking at the same horizon.</span>
-                        <span class="hebrew-only">שתי המסורות מסכימות: ההכרה תהיה אוניברסלית כאשר הכבוד יופיע. המחלוקת הנוכחית היא משחק המתנה. כשהוא יבוא, הוויכוח יסתיים — לא כי צד אחד מפסיד, אלא כי שניהם הסתכלו לאותו אופק.</span>
+                        <span class="lang-en">Both traditions agree: recognition will be universal when the glory appears. When he comes, the argument ends — because both were looking at the same horizon.</span>
+                        <span class="lang-he">שתי המסורות מסכימות: ההכרה תהיה אוניברסלית כאשר הכבוד יופיע. כשהוא יבוא, הוויכוח יסתיים — כי שניהם הסתכלו לאותו אופק.</span>
+                        <span class="lang-es">Ambas tradiciones concuerdan: el reconocimiento será universal cuando la gloria aparezca. Cuando él venga, el argumento termina — porque ambos miraban al mismo horizonte.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching 8 -->
             <div class="teaching-card fade-in">
                 <div class="teaching-header">
                     <span class="teaching-number">VIII</span>
-                    <h3 class="teaching-title english-only">We Are One Body</h3>
-                    <h3 class="teaching-title hebrew-only">אנו גוף אחד</h3>
+                    <h3 class="teaching-title lang-en">We Are One Body</h3>
+                    <h3 class="teaching-title lang-he">אנו גוף אחד</h3>
+                    <h3 class="teaching-title lang-es">Somos Un Solo Cuerpo</h3>
                 </div>
                 <div class="teaching-body">
                     <div class="dual-column">
                         <div class="column jewish">
-                            <h4 class="english-only">Jewish Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה היהודית</h4>
-                            <p class="english-only">"My house shall be called a house of prayer for all peoples" (Isaiah 56:7). "The Lord will be king over all the earth. On that day the Lord will be one and his name one" (Zechariah 14:9). The prophets saw Gentiles streaming to Zion, joining Israel in worship of the one God.</p>
-                            <p class="hebrew-only">"ביתי בית תפילה יקרא לכל העמים" (ישעיהו נ״ו:ז׳). "והיה ה׳ למלך על כל הארץ ביום ההוא יהיה ה׳ אחד ושמו אחד" (זכריה י״ד:ט׳). הנביאים ראו גויים נוהרים לציון, מצטרפים לישראל בפולחן האל האחד.</p>
+                            <h4 class="lang-en">Jewish Understanding</h4>
+                            <h4 class="lang-he">ההבנה היהודית</h4>
+                            <h4 class="lang-es">Comprensión Judía</h4>
+                            <p class="lang-en">"My house shall be called a house of prayer for all peoples" (Isaiah 56:7). The prophets saw Gentiles streaming to Zion, joining Israel in worship of the one God.</p>
+                            <p class="lang-he">"ביתי בית תפילה יקרא לכל העמים" (ישעיהו נ״ו:ז׳). הנביאים ראו גויים נוהרים לציון, מצטרפים לישראל בפולחן האל האחד.</p>
+                            <p class="lang-es">"Mi casa será llamada casa de oración para todos los pueblos" (Isaías 56:7). Los profetas vieron a los gentiles fluyendo hacia Sión, uniéndose a Israel en la adoración del único Dios.</p>
                         </div>
                         <div class="column christian">
-                            <h4 class="english-only">Christian Understanding</h4>
-                            <h4 class="hebrew-only">ההבנה הנוצרית</h4>
-                            <p class="english-only">"He has made us both one and has broken down the dividing wall" (Ephesians 2:14). "There is neither Jew nor Gentile... for you are all one in Christ Jesus" (Galatians 3:28). One olive tree. One body. One new humanity.</p>
-                            <p class="hebrew-only">"עשה את השניים אחד והרס את המחיצה החוצצת" (אל האפסים ב׳:י״ד). "אין יהודי ואין גוי... כי כולכם אחד במשיח ישוע" (אל הגלטים ג׳:כ״ח). עץ זית אחד. גוף אחד. אנושות חדשה אחת.</p>
+                            <h4 class="lang-en">Christian Understanding</h4>
+                            <h4 class="lang-he">ההבנה הנוצרית</h4>
+                            <h4 class="lang-es">Comprensión Cristiana</h4>
+                            <p class="lang-en">"He has made us both one and has broken down the dividing wall" (Ephesians 2:14). One olive tree. One body. One new humanity.</p>
+                            <p class="lang-he">"עשה את השניים אחד והרס את המחיצה החוצצת" (אל האפסים ב׳:י״ד). עץ זית אחד. גוף אחד. אנושות חדשה אחת.</p>
+                            <p class="lang-es">"Él ha hecho de ambos uno y ha derribado el muro divisorio" (Efesios 2:14). Un olivo. Un cuerpo. Una nueva humanidad.</p>
                         </div>
                     </div>
                     <div class="unity-statement">
                         <div class="icon">✡ ✝</div>
-                        <span class="english-only">This is not about reconciling enemies. This is about recognizing what was always true. The wall was temporary. We are one body, awaiting one King, serving one God. The unity doesn't need to be created — it needs to be revealed.</span>
-                        <span class="hebrew-only">זה לא על פיוס אויבים. זה על הכרה במה שתמיד היה אמת. החומה הייתה זמנית. אנו גוף אחד, מחכים למלך אחד, משרתים אל אחד. האחדות לא צריכה להיווצר — היא צריכה להתגלות.</span>
+                        <span class="lang-en">This is not about reconciling enemies. This is about recognizing what was always true. The wall was temporary. We are one body, awaiting one King, serving one God.</span>
+                        <span class="lang-he">זה לא על פיוס אויבים. זה על הכרה במה שתמיד היה אמת. החומה הייתה זמנית. אנו גוף אחד, מחכים למלך אחד, משרתים אל אחד.</span>
+                        <span class="lang-es">Esto no se trata de reconciliar enemigos. Se trata de reconocer lo que siempre fue verdad. El muro era temporal. Somos un solo cuerpo, esperando a un Rey, sirviendo a un Dios.</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Principles Section -->
     <section id="principles">
-        <h2 class="section-title english-only">Foundational Principles</h2>
-        <h2 class="section-title hebrew-only">עקרונות יסוד</h2>
+        <h2 class="section-title lang-en">Foundational Principles</h2>
+        <h2 class="section-title lang-he">עקרונות יסוד</h2>
+        <h2 class="section-title lang-es">Principios Fundamentales</h2>
         
         <div class="principles-grid">
             <div class="principle-card fade-in">
-                <h3 class="english-only">No Conversion Required</h3>
-                <h3 class="hebrew-only">אין צורך בהמרה</h3>
-                <p class="english-only">Jews should not convert to Christianity. Christians should not convert to Judaism. Each has their covenant, their calling, their path. Both paths lead to the same God, the same Messiah, the same destination.</p>
-                <p class="hebrew-only">יהודים לא צריכים להתנצר. נוצרים לא צריכים להתגייר. לכל אחד יש את הברית שלו, הייעוד שלו, הדרך שלו. שתי הדרכים מובילות לאותו אלוהים, אותו משיח, אותו יעד.</p>
+                <h3 class="lang-en">No Conversion Required</h3>
+                <h3 class="lang-he">אין צורך בהמרה</h3>
+                <h3 class="lang-es">No Se Requiere Conversión</h3>
+                <p class="lang-en">Jews should not convert to Christianity. Christians should not convert to Judaism. Each has their covenant, their calling, their path. Both paths lead to the same God.</p>
+                <p class="lang-he">יהודים לא צריכים להתנצר. נוצרים לא צריכים להתגייר. לכל אחד יש את הברית שלו, הייעוד שלו, הדרך שלו. שתי הדרכים מובילות לאותו אלוהים.</p>
+                <p class="lang-es">Los judíos no deben convertirse al cristianismo. Los cristianos no deben convertirse al judaísmo. Cada uno tiene su pacto, su llamado, su camino. Ambos caminos conducen al mismo Dios.</p>
             </div>
             
             <div class="principle-card fade-in">
-                <h3 class="english-only">The Noahide Foundation</h3>
-                <h3 class="hebrew-only">יסוד בני נח</h3>
-                <p class="english-only">Jesus distilled the Noahide covenant into its essence: Love God. Love neighbor. This ancient covenant — older than Sinai — is the Gentile path to the God of Israel. Christianity is its flowering, not its replacement.</p>
-                <p class="hebrew-only">ישוע זיקק את ברית בני נח למהותה: אהוב את אלוהים. אהוב את רעך. ברית עתיקה זו — קדומה מסיני — היא דרך הגויים לאלוהי ישראל. הנצרות היא פריחתה, לא החלפתה.</p>
+                <h3 class="lang-en">The Noahide Foundation</h3>
+                <h3 class="lang-he">יסוד בני נח</h3>
+                <h3 class="lang-es">El Fundamento Noájida</h3>
+                <p class="lang-en">Jesus distilled the Noahide covenant into its essence: Love God. Love neighbor. This ancient covenant is the Gentile path to the God of Israel.</p>
+                <p class="lang-he">ישוע זיקק את ברית בני נח למהותה: אהוב את אלוהים. אהוב את רעך. ברית עתיקה זו היא דרך הגויים לאלוהי ישראל.</p>
+                <p class="lang-es">Jesús destiló el pacto noájida en su esencia: Ama a Dios. Ama al prójimo. Este antiguo pacto es el camino gentil hacia el Dios de Israel.</p>
             </div>
             
             <div class="principle-card fade-in">
-                <h3 class="english-only">Multiple Forms, One Messiah</h3>
-                <h3 class="hebrew-only">צורות מרובות, משיח אחד</h3>
-                <p class="english-only">The Gospels show the Messiah in multiple forms — pre-existent, incarnate, transfigured, suffering, risen, glorified. If Christians accept this multiplicity, they cannot reject the Jewish concept of ben Yosef and ben David as two aspects of one messianic reality.</p>
-                <p class="hebrew-only">הבשורות מראות את המשיח בצורות מרובות — קדם-קיום, התגלמות, התגלות, סבל, תחייה, פאר. אם נוצרים מקבלים ריבוי זה, הם לא יכולים לדחות את המושג היהודי של בן יוסף ובן דוד כשני היבטים של מציאות משיחית אחת.</p>
+                <h3 class="lang-en">Multiple Forms, One Messiah</h3>
+                <h3 class="lang-he">צורות מרובות, משיח אחד</h3>
+                <h3 class="lang-es">Múltiples Formas, Un Mesías</h3>
+                <p class="lang-en">The Gospels show the Messiah in multiple forms. If Christians accept this multiplicity, they cannot reject ben Yosef and ben David as two aspects of one messianic reality.</p>
+                <p class="lang-he">הבשורות מראות את המשיח בצורות מרובות. אם נוצרים מקבלים ריבוי זה, הם לא יכולים לדחות את בן יוסף ובן דוד כשני היבטים של מציאות משיחית אחת.</p>
+                <p class="lang-es">Los Evangelios muestran al Mesías en múltiples formas. Si los cristianos aceptan esta multiplicidad, no pueden rechazar a ben Yosef y ben David como dos aspectos de una realidad mesiánica.</p>
             </div>
             
             <div class="principle-card fade-in">
-                <h3 class="english-only">Patience, Not Division</h3>
-                <h3 class="hebrew-only">סבלנות, לא פילוג</h3>
-                <p class="english-only">The disagreement between Jews and Christians is not a fundamental divide — it is a matter of timing and identification. Both await the same victory. When the glory appears, both will see. Until then, we wait together, looking at the same horizon.</p>
-                <p class="hebrew-only">המחלוקת בין יהודים לנוצרים אינה פילוג יסודי — היא עניין של תזמון וזיהוי. שניהם מחכים לאותו ניצחון. כאשר הכבוד יופיע, שניהם יראו. עד אז, אנו מחכים יחד, מביטים לאותו אופק.</p>
+                <h3 class="lang-en">Patience, Not Division</h3>
+                <h3 class="lang-he">סבלנות, לא פילוג</h3>
+                <h3 class="lang-es">Paciencia, No División</h3>
+                <p class="lang-en">The disagreement between Jews and Christians is not a fundamental divide — it is a matter of timing and identification. Both await the same victory.</p>
+                <p class="lang-he">המחלוקת בין יהודים לנוצרים אינה פילוג יסודי — היא עניין של תזמון וזיהוי. שניהם מחכים לאותו ניצחון.</p>
+                <p class="lang-es">El desacuerdo entre judíos y cristianos no es una división fundamental — es una cuestión de tiempo e identificación. Ambos esperan la misma victoria.</p>
             </div>
             
             <div class="principle-card fade-in">
-                <h3 class="english-only">The Winners Mentality</h3>
-                <h3 class="hebrew-only">המנטליות של המנצחים</h3>
-                <p class="english-only">Jews are right to hold out for visible, undeniable victory. That's what the prophets promised. That's the winners mentality — faithful expectation of triumph. Christians share this hope. Both await the king who actually wins.</p>
-                <p class="hebrew-only">יהודים צודקים להחזיק מעמד למען ניצחון גלוי, בלתי ניתן להכחשה. זה מה שהנביאים הבטיחו. זו המנטליות של המנצחים — ציפייה נאמנה לניצחון. נוצרים חולקים תקווה זו. שניהם מחכים למלך שבאמת מנצח.</p>
+                <h3 class="lang-en">The Winners Mentality</h3>
+                <h3 class="lang-he">המנטליות של המנצחים</h3>
+                <h3 class="lang-es">La Mentalidad de Vencedores</h3>
+                <p class="lang-en">Jews are right to hold out for visible, undeniable victory. That's what the prophets promised. Christians share this hope. Both await the king who actually wins.</p>
+                <p class="lang-he">יהודים צודקים להחזיק מעמד למען ניצחון גלוי, בלתי ניתן להכחשה. זה מה שהנביאים הבטיחו. נוצרים חולקים תקווה זו. שניהם מחכים למלך שבאמת מנצח.</p>
+                <p class="lang-es">Los judíos tienen razón en esperar una victoria visible e innegable. Eso es lo que prometieron los profetas. Los cristianos comparten esta esperanza. Ambos esperan al rey que realmente vence.</p>
             </div>
             
             <div class="principle-card fade-in">
-                <h3 class="english-only">Unity Revealed, Not Created</h3>
-                <h3 class="hebrew-only">אחדות שמתגלה, לא נוצרת</h3>
-                <p class="english-only">The goal is not to reconcile enemies or merge religions. The goal is to reveal what was always true: there is no disharmony. The wall was temporary. The separation was never meant to be permanent. We are one body, discovering we always were.</p>
-                <p class="hebrew-only">המטרה אינה לפייס אויבים או למזג דתות. המטרה היא לגלות את מה שתמיד היה אמת: אין חוסר הרמוניה. החומה הייתה זמנית. הפרידה מעולם לא הייתה אמורה להיות קבועה. אנו גוף אחד, מגלים שתמיד היינו.</p>
+                <h3 class="lang-en">Unity Revealed, Not Created</h3>
+                <h3 class="lang-he">אחדות שמתגלה, לא נוצרת</h3>
+                <h3 class="lang-es">Unidad Revelada, No Creada</h3>
+                <p class="lang-en">The goal is not to reconcile enemies or merge religions. The goal is to reveal what was always true: there is no disharmony. We are one body.</p>
+                <p class="lang-he">המטרה אינה לפייס אויבים או למזג דתות. המטרה היא לגלות את מה שתמיד היה אמת: אין חוסר הרמוניה. אנו גוף אחד.</p>
+                <p class="lang-es">El objetivo no es reconciliar enemigos ni fusionar religiones. El objetivo es revelar lo que siempre fue verdad: no hay desarmonía. Somos un solo cuerpo.</p>
             </div>
         </div>
     </section>
 
-    <!-- Scripture Section -->
     <section id="scripture">
-        <h2 class="section-title english-only">Scripture Witnesses</h2>
-        <h2 class="section-title hebrew-only">עדויות מכתבי הקודש</h2>
+        <h2 class="section-title lang-en">Scripture Witnesses</h2>
+        <h2 class="section-title lang-he">עדויות מכתבי הקודש</h2>
+        <h2 class="section-title lang-es">Testimonios de las Escrituras</h2>
         
         <div class="scripture-grid">
             <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"And the Lord will be king over all the earth. On that day the Lord will be one and his name one."</p>
-                <p class="scripture-text hebrew-only">"וְהָיָה יְהוָה לְמֶלֶךְ עַל כָּל הָאָרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהוָה אֶחָד וּשְׁמוֹ אֶחָד"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Zechariah 14:9</span>
-                    <span class="hebrew-only">זכריה י״ד:ט׳</span>
-                    <span class="scripture-source jewish">Tanakh</span>
-                </p>
+                <p class="scripture-text lang-en">"And the Lord will be king over all the earth. On that day the Lord will be one and his name one."</p>
+                <p class="scripture-text lang-he">"וְהָיָה יְהוָה לְמֶלֶךְ עַל כָּל הָאָרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהוָה אֶחָד וּשְׁמוֹ אֶחָד"</p>
+                <p class="scripture-text lang-es">"Y el Señor será rey sobre toda la tierra. En aquel día el Señor será uno y su nombre uno."</p>
+                <p class="scripture-ref"><span class="lang-en">Zechariah 14:9</span><span class="lang-he">זכריה י״ד:ט׳</span><span class="lang-es">Zacarías 14:9</span><span class="scripture-source jewish">Tanakh</span></p>
             </div>
             
             <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"For he himself is our peace, who has made us both one and has broken down in his flesh the dividing wall of hostility."</p>
-                <p class="scripture-text hebrew-only">"כִּי הוּא שְׁלוֹמֵנוּ אֲשֶׁר עָשָׂה אֶת הַשְּׁנַיִם אֶחָד וְהָרַס אֶת הַמְּחִצָּה הַחוֹצֶצֶת"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Ephesians 2:14</span>
-                    <span class="hebrew-only">אל האפסים ב׳:י״ד</span>
-                    <span class="scripture-source christian">New Testament</span>
-                </p>
+                <p class="scripture-text lang-en">"For he himself is our peace, who has made us both one and has broken down in his flesh the dividing wall of hostility."</p>
+                <p class="scripture-text lang-he">"כִּי הוּא שְׁלוֹמֵנוּ אֲשֶׁר עָשָׂה אֶת הַשְּׁנַיִם אֶחָד וְהָרַס אֶת הַמְּחִצָּה הַחוֹצֶצֶת"</p>
+                <p class="scripture-text lang-es">"Porque él es nuestra paz, que de ambos pueblos hizo uno, derribando la pared intermedia de separación."</p>
+                <p class="scripture-ref"><span class="lang-en">Ephesians 2:14</span><span class="lang-he">אל האפסים ב׳:י״ד</span><span class="lang-es">Efesios 2:14</span><span class="scripture-source christian">New Testament</span></p>
             </div>
             
             <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"Behold, he is coming with the clouds, and every eye will see him, even those who pierced him."</p>
-                <p class="scripture-text hebrew-only">"הִנֵּה הוּא בָא עִם הֶעָנָנִים וְכָל עַיִן תִּרְאֶה אוֹתוֹ גַּם אֵלֶּה אֲשֶׁר דְּקָרֻהוּ"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Revelation 1:7</span>
-                    <span class="hebrew-only">התגלות א׳:ז׳</span>
-                    <span class="scripture-source christian">New Testament</span>
-                </p>
+                <p class="scripture-text lang-en">"Behold, he is coming with the clouds, and every eye will see him."</p>
+                <p class="scripture-text lang-he">"הִנֵּה הוּא בָא עִם הֶעָנָנִים וְכָל עַיִן תִּרְאֶה אוֹתוֹ"</p>
+                <p class="scripture-text lang-es">"He aquí que viene con las nubes, y todo ojo le verá."</p>
+                <p class="scripture-ref"><span class="lang-en">Revelation 1:7</span><span class="lang-he">התגלות א׳:ז׳</span><span class="lang-es">Apocalipsis 1:7</span><span class="scripture-source christian">New Testament</span></p>
             </div>
             
             <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"My house shall be called a house of prayer for all peoples."</p>
-                <p class="scripture-text hebrew-only">"כִּי בֵיתִי בֵּית תְּפִלָּה יִקָּרֵא לְכָל הָעַמִּים"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Isaiah 56:7</span>
-                    <span class="hebrew-only">ישעיהו נ״ו:ז׳</span>
-                    <span class="scripture-source jewish">Tanakh</span>
-                </p>
+                <p class="scripture-text lang-en">"My house shall be called a house of prayer for all peoples."</p>
+                <p class="scripture-text lang-he">"כִּי בֵיתִי בֵּית תְּפִלָּה יִקָּרֵא לְכָל הָעַמִּים"</p>
+                <p class="scripture-text lang-es">"Mi casa será llamada casa de oración para todos los pueblos."</p>
+                <p class="scripture-ref"><span class="lang-en">Isaiah 56:7</span><span class="lang-he">ישעיהו נ״ו:ז׳</span><span class="lang-es">Isaías 56:7</span><span class="scripture-source jewish">Tanakh</span></p>
             </div>
             
             <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"There is neither Jew nor Gentile... for you are all one in Christ Jesus."</p>
-                <p class="scripture-text hebrew-only">"אֵין יְהוּדִי וְאֵין גּוֹי... כִּי כֻלְּכֶם אֶחָד בַּמָּשִׁיחַ יֵשׁוּעַ"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Galatians 3:28</span>
-                    <span class="hebrew-only">אל הגלטים ג׳:כ״ח</span>
-                    <span class="scripture-source christian">New Testament</span>
-                </p>
+                <p class="scripture-text lang-en">"Surely he has borne our griefs and carried our sorrows."</p>
+                <p class="scripture-text lang-he">"אָכֵן חֳלָיֵנוּ הוּא נָשָׂא וּמַכְאוֹבֵינוּ סְבָלָם"</p>
+                <p class="scripture-text lang-es">"Ciertamente llevó él nuestras enfermedades, y sufrió nuestros dolores."</p>
+                <p class="scripture-ref"><span class="lang-en">Isaiah 53:4</span><span class="lang-he">ישעיהו נ״ג:ד׳</span><span class="lang-es">Isaías 53:4</span><span class="scripture-source jewish">Tanakh</span></p>
             </div>
             
             <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted."</p>
-                <p class="scripture-text hebrew-only">"אָכֵן חֳלָיֵנוּ הוּא נָשָׂא וּמַכְאוֹבֵינוּ סְבָלָם וַאֲנַחְנוּ חֲשַׁבְנֻהוּ נָגוּעַ מֻכֵּה אֱלֹהִים וּמְעֻנֶּה"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Isaiah 53:4</span>
-                    <span class="hebrew-only">ישעיהו נ״ג:ד׳</span>
-                    <span class="scripture-source jewish">Tanakh</span>
-                </p>
-            </div>
-            
-            <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"Righteous people of all nations have a share in the world to come."</p>
-                <p class="scripture-text hebrew-only">"חסידי אומות העולם יש להם חלק לעולם הבא"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Talmud, Sanhedrin 105a</span>
-                    <span class="hebrew-only">תלמוד, סנהדרין ק״ה א׳</span>
-                    <span class="scripture-source jewish">Talmud</span>
-                </p>
-            </div>
-            
-            <div class="scripture-card fade-in">
-                <p class="scripture-text english-only">"You shall love the Lord your God with all your heart and with all your soul and with all your mind... You shall love your neighbor as yourself."</p>
-                <p class="scripture-text hebrew-only">"וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ וּבְכָל מְאֹדֶךָ... וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ"</p>
-                <p class="scripture-ref">
-                    <span class="english-only">Matthew 22:37-39 / Deuteronomy 6:5, Leviticus 19:18</span>
-                    <span class="hebrew-only">מתי כ״ב:ל״ז-ל״ט / דברים ו׳:ה׳, ויקרא י״ט:י״ח</span>
-                    <span class="scripture-source jewish">Torah</span>
-                    <span class="scripture-source christian">Gospel</span>
-                </p>
+                <p class="scripture-text lang-en">"Righteous people of all nations have a share in the world to come."</p>
+                <p class="scripture-text lang-he">"חסידי אומות העולם יש להם חלק לעולם הבא"</p>
+                <p class="scripture-text lang-es">"Los justos de todas las naciones tienen parte en el mundo venidero."</p>
+                <p class="scripture-ref"><span class="lang-en">Talmud, Sanhedrin 105a</span><span class="lang-he">תלמוד, סנהדרין ק״ה א׳</span><span class="lang-es">Talmud, Sanedrín 105a</span><span class="scripture-source jewish">Talmud</span></p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title english-only">Join the Conversation</h2>
-        <h2 class="section-title hebrew-only">הצטרפו לשיחה</h2>
+        <h2 class="section-title lang-en">Join the Conversation</h2>
+        <h2 class="section-title lang-he">הצטרפו לשיחה</h2>
+        <h2 class="section-title lang-es">Únete a la Conversación</h2>
         
         <div class="contact-content">
-            <p class="english-only">This ministry is in its founding stages. If these teachings resonate with you — whether you are Jewish, Christian, or seeking — I invite you to reach out. Together, we can reveal the unity that was always there.</p>
-            <p class="hebrew-only">שירות זה נמצא בשלבי הקמה. אם תורות אלו מהדהדות בך — בין אם אתה יהודי, נוצרי, או מחפש — אני מזמין אותך ליצור קשר. יחד, נוכל לגלות את האחדות שתמיד הייתה שם.</p>
+            <p class="lang-en">This ministry is in its founding stages. If these teachings resonate with you — whether you are Jewish, Christian, or seeking — I invite you to reach out. Together, we can reveal the unity that was always there.</p>
+            <p class="lang-he">שירות זה נמצא בשלבי הקמה. אם תורות אלו מהדהדות בך — בין אם אתה יהודי, נוצרי, או מחפש — אני מזמין אותך ליצור קשר. יחד, נוכל לגלות את האחדות שתמיד הייתה שם.</p>
+            <p class="lang-es">Este ministerio está en sus etapas fundacionales. Si estas enseñanzas resuenan contigo — ya seas judío, cristiano, o buscador — te invito a comunicarte. Juntos, podemos revelar la unidad que siempre estuvo allí.</p>
             
             <a href="mailto:contact@levertofflegacy.org" class="contact-email">contact@levertofflegacy.org</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-brand english-only">The Levertoff Legacy</div>
-        <div class="footer-brand hebrew-only">מורשת לברטוף</div>
-        <p class="english-only">Continuing the vision of Paul Philip Levertoff (1878–1954)</p>
-        <p class="hebrew-only">ממשיכים את חזונו של פאול פיליפ לברטוף (1878–1954)</p>
+        <div class="footer-brand lang-en">The Levertoff Legacy</div>
+        <div class="footer-brand lang-he">מורשת לברטוף</div>
+        <div class="footer-brand lang-es">El Legado Levertoff</div>
+        <p class="lang-en">Continuing the vision of Paul Philip Levertoff (1878–1954)</p>
+        <p class="lang-he">ממשיכים את חזונו של פאול פיליפ לברטוף (1878–1954)</p>
+        <p class="lang-es">Continuando la visión de Paul Philip Levertoff (1878–1954)</p>
         <p style="margin-top: 20px; opacity: 0.5;">© 2026</p>
     </footer>
 
     <script>
-        // Language Toggle
         function setLanguage(lang) {
             const body = document.body;
             const buttons = document.querySelectorAll('.lang-btn');
+            
+            body.classList.remove('english', 'hebrew', 'spanish');
             
             if (lang === 'he') {
                 body.classList.add('hebrew');
                 body.setAttribute('dir', 'rtl');
                 document.documentElement.lang = 'he';
+            } else if (lang === 'es') {
+                body.classList.add('spanish');
+                body.setAttribute('dir', 'ltr');
+                document.documentElement.lang = 'es';
             } else {
-                body.classList.remove('hebrew');
+                body.classList.add('english');
                 body.setAttribute('dir', 'ltr');
                 document.documentElement.lang = 'en';
             }
             
             buttons.forEach(btn => {
                 btn.classList.remove('active');
-                if ((lang === 'he' && btn.textContent === 'עברית') || 
-                    (lang === 'en' && btn.textContent === 'English')) {
+                if (btn.getAttribute('data-lang') === lang) {
                     btn.classList.add('active');
                 }
             });
         }
 
-        // Scroll Animation
         function handleScrollAnimation() {
             const elements = document.querySelectorAll('.fade-in');
-            
             elements.forEach(el => {
                 const rect = el.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-                
-                if (rect.top < windowHeight * 0.85) {
+                if (rect.top < window.innerHeight * 0.85) {
                     el.classList.add('visible');
                 }
             });
@@ -1218,18 +1027,12 @@
         window.addEventListener('scroll', handleScrollAnimation);
         window.addEventListener('load', handleScrollAnimation);
 
-        // Smooth scroll for navigation
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
+                const targetElement = document.querySelector(this.getAttribute('href'));
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
